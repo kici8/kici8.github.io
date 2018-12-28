@@ -81,20 +81,40 @@ body {
   border-top: 1px solid var(--darkGray);
 }
 
-/****************** NAV */
-#nav--trigger {
-    width: 32px;
-    height: 32px;
+/****************** ELEMENTS */
 
-    position: fixed;
-    cursor: pointer;
+.btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding: var(--xs) var(--sm);
+  border: 2px solid var(--darkGray);
+  text-transform: capitalize;
+  cursor: pointer;
 
-    top: var(--md);
-    right: var(--md);
-    z-index: 2000;
+  transition: background-color .15s ease-out, color .15s ease-out ; 
 }
 
-.burger--top, .burger--bottom {
+.btn:hover {
+  background-color: var(--darkGray);
+  color: var(--bg--gray);
+}
+
+/****************** NAV */
+#nav--trigger {
+  width: 32px;
+  height: 32px;
+
+  position: fixed;
+  cursor: pointer;
+
+  top: var(--md);
+  right: var(--md);
+  z-index: 2000;
+}
+
+.burger--top,
+.burger--bottom {
   display: block;
   position: absolute;
   z-index: 2100;
@@ -105,47 +125,45 @@ body {
   background: var(--darkGray);
   content: "";
 
-  -webkit-transform: translate3d(0,0,0) rotate(0deg);
+  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: translate3d(0,0,0) rotate(0deg);
+  transform: translate3d(0, 0, 0) rotate(0deg);
 
-
-  -webkit-transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out, top 0.25s ease-in-out;
-  -moz-transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out, top 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out, top 0.25s ease-in-out;
+  -webkit-transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out,
+    top 0.25s ease-in-out;
+  -moz-transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out,
+    top 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, bottom 0.25s ease-in-out,
+    top 0.25s ease-in-out;
 }
 
 .burger--top {
   top: 10px;
-} 
+}
 
-.burger--bottom  {
+.burger--bottom {
   bottom: 10px;
 }
 
-
 #nav--trigger.active .burger--top {
   top: 15px;
-  -webkit-transform: translate3d(0,0,0) rotate(45deg);
-  -moz-transform: translate3d(0,0,0) rotate(45deg);
-  -ms-transform: translate3d(0,0,0) rotate(45deg);
-  -o-transform: translate3d(0,0,0) rotate(45deg);
-  transform: translate3d(0,0,0) rotate(45deg);
-} 
-
-#nav--trigger.active .burger--bottom  {
-  bottom: 15px;
-  -webkit-transform: translate3d(0,0,0) rotate(-45deg);
-  -moz-transform: translate3d(0,0,0) rotate(-45deg);
-  -ms-transform: translate3d(0,0,0) rotate(-45deg);
-  -o-transform: translate3d(0,0,0) rotate(-45deg);
-  transform: translate3d(0,0,0) rotate(-45deg);
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+  -moz-transform: translate3d(0, 0, 0) rotate(45deg);
+  -ms-transform: translate3d(0, 0, 0) rotate(45deg);
+  -o-transform: translate3d(0, 0, 0) rotate(45deg);
+  transform: translate3d(0, 0, 0) rotate(45deg);
 }
 
-
-
+#nav--trigger.active .burger--bottom {
+  bottom: 15px;
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+  -moz-transform: translate3d(0, 0, 0) rotate(-45deg);
+  -ms-transform: translate3d(0, 0, 0) rotate(-45deg);
+  -o-transform: translate3d(0, 0, 0) rotate(-45deg);
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
 
 #nav {
   background-color: var(--bg--red);
@@ -166,9 +184,9 @@ body {
 #nav.active {
   transform: translateY(0%);
 
-  -webkit-transition: transform .175s ease-out;
-  -moz-transition: transform .175s ease-out;
-  transition: transform .175s ease-out;
+  -webkit-transition: transform 0.175s ease-out;
+  -moz-transition: transform 0.175s ease-out;
+  transition: transform 0.175s ease-out;
 }
 
 .nav--content {
@@ -182,8 +200,6 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-
-
 
 /****************** LAYOUT */
 
@@ -235,10 +251,10 @@ section {
 }
 
 .url {
-  text-decoration: none !important; 
+  text-decoration: none !important;
   text-decoration-color: none !important;
-  text-decoration-line: none !important; 
-  text-decoration-style: none !important; 
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
   border-bottom: 1px solid var(--darkGray);
   cursor: pointer;
   color: var(--darkGray);
@@ -338,25 +354,40 @@ section {
 
 /* Section study Holiday */
 /* Japan */
-.section--study-holiday {
+.section--study--holiday {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.section--study-holiday .flex--container {
+.section--study--holiday .flex--container {
   flex-direction: row;
 }
 
 .japan--container {
   width: var(--col-02);
   background-color: var(--bg--red);
+  display: flex;
+  padding-top: var(--lg);
+  padding-bottom: var(--xl);
 }
 
 .india--container {
   width: var(--col-10);
   background-color: aquamarine;
+  display: flex;
+  padding-top: var(--lg);
+  padding-bottom: var(--xl);
 }
 
+.study--holiday__title--container {
+  position: relative;
+  background-color: yellow;
+}
+
+.study--holiday__title {
+  background-color: blue;
+  padding: var(--sm);
+}
 
 /* Footer */
 footer {
@@ -371,7 +402,7 @@ footer {
 /* for-tablet-portrait-up */
 @media (min-width: 768px) {
   #nav {
-    width: var(--col-06)
+    width: var(--col-06);
   }
 
   .flex--content {
@@ -381,25 +412,22 @@ footer {
 
 /*  for-tablet-landscape-up */
 @media (min-width: 992px) {
-
 }
 
 /*  for-desktop-up */
 @media (min-width: 1140px) {
-
   #nav {
     width: var(--col-04);
   }
 
   .flex--container {
-    flex-direction: row;    
+    flex-direction: row;
   }
 
   .flex--content {
     width: var(--col-05);
   }
 
-  
   /* Section Yoga */
   .section--yoga .flex--container {
     flex-direction: row-reverse;
@@ -412,7 +440,7 @@ footer {
     width: var(--col-03);
   }
 
-  .flex--content--divider { 
+  .flex--content--divider {
     display: flex;
     width: var(--col-02);
   }
@@ -420,5 +448,4 @@ footer {
   .flex--content {
     width: var(--col-03);
   }
-
 }
