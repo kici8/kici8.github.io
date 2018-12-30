@@ -380,13 +380,18 @@ section {
 }
 
 .study--holiday__title--container {
-  position: relative;
-  background-color: yellow;
+  margin: 0 auto;
 }
 
-.study--holiday__title {
-  background-color: blue;
-  padding: var(--sm);
+.study--holiday__title span {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+
+  display: block;
+  padding: var(--xs);
+  text-align: center;
+
 }
 
 /* Footer */
