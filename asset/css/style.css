@@ -264,10 +264,19 @@ section {
   margin-bottom: var(--sm);
 }
 
+.copy__info {
+  padding-top: var(--sm);
+}
+
+.copy__info--divider {
+  height: 1px;
+  border-bottom: 1px solid var(--darkGray);
+  margin-bottom: var(--sm);
+}
+
 .copy__info--container {
   display: flex;
-
-  padding: var(--sm) 0;
+  padding-bottom: var(--sm);
 }
 
 .copy__info--content {
