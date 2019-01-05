@@ -100,7 +100,6 @@ body {
   -ms-user-select: none;
   user-select: none;
 
-
   display: inline-block;
   font-size: 1.8rem;
   line-height: 2.4rem;
@@ -109,8 +108,7 @@ body {
   text-transform: capitalize;
   cursor: pointer;
 
-  transition: background-color .15s ease-out, color .15s ease-out ;
-
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
 }
 
 .btn:hover {
@@ -119,26 +117,67 @@ body {
 }
 
 /****************** NAV */
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  padding: var(--sm) 0;
+  background-color: var(--bg--gray);
+}
+
+.header__logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  background-color: black;
+  width: 77px;
+  height: 50px;
+  margin: 0 auto;
+  transition: width 0.125s linear, height 0.125s linear;
+}
+
+.header__logo.show {
+  width: 100px;
+  height: 65px;
+}
+
+.header__logo__name {
+  opacity: 0;
+  margin: 0 auto;
+  height: 0;
+  margin-top: var(--sm);
+  transition: opacity 0.125s linear, height 0.125s linear;
+}
+
+.header__logo__name.show {
+  opacity: 1;
+  height: auto;
+}
+
 #nav--trigger {
   width: 32px;
   height: 32px;
 
   position: fixed;
   cursor: pointer;
+  z-index: 2200;
 
   top: var(--md);
   right: var(--md);
-  z-index: 2000;
 }
 
 .burger--top,
 .burger--bottom {
   display: block;
   position: absolute;
-  z-index: 2100;
+  z-index: 2200;
   left: 0;
   height: 2px;
-  min-height: 2px;
   width: 100%;
   background: var(--darkGray);
   content: "";
@@ -186,7 +225,7 @@ body {
 #nav {
   background-color: var(--bg--red);
   position: fixed;
-  z-index: 1000;
+  z-index: 2100;
   height: 100vh;
   right: 0;
   width: var(--col-09);
@@ -284,6 +323,7 @@ section {
 
 .copy__info {
   padding-top: var(--sm);
+  margin-bottom: var(--md);
 }
 
 .copy__info--divider {
@@ -370,7 +410,7 @@ section {
 
 /***************** PLACEHOLDER */
 /* backgrounds */
-.background--yoga--meditation {
+.background--yoga-meditation {
   background-color: var(--bg--gray);
 }
 
@@ -380,47 +420,27 @@ section {
 }
 
 /* Section study Holiday */
-/* Japan */
+
 .section--study--holiday {
-  padding-top: 0;
-  padding-bottom: 0;
+  display: flex;
+  padding: 0;
 }
 
-.section--study--holiday .flex--container {
-  flex-direction: row;
-}
-
+/* Japan */
 .japan--container {
-  width: var(--col-02);
-  background-image: url("../img/yogaPlaceholder.jpg");
+  width: var(--col-12);
+  background-image: url("../img/giappone/01.png");
   display: flex;
   padding-top: var(--lg);
   padding-bottom: var(--xl);
 }
 
 .india--container {
-  width: var(--col-10);
-  background-color: aquamarine;
+  width: var(--col-12);
+  background-image: url("../img/india/02.png");
   display: flex;
   padding-top: var(--lg);
   padding-bottom: var(--xl);
-}
-
-.study--holiday__title--container {
-  margin: 0 auto;
-}
-
-.study--holiday__title span {
-  color: var(--white);
-
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  font-weight: 400;
-
-  display: block;
-  padding: var(--xs);
-  text-align: center;
-
 }
 
 /* Footer */
@@ -465,6 +485,16 @@ footer {
   /* Section Yoga */
   .section--yoga .flex--container {
     flex-direction: row-reverse;
+  }
+
+  /* Section study Holiday */
+  /* Japan */
+  .japan--container {
+    width: var(--col-06);
+  }
+
+  .india--container {
+    width: var(--col-06);
   }
 }
 
