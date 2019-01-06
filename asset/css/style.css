@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Sarala:400,700');
+@import url("https://fonts.googleapis.com/css?family=Sarala:400,700");
 
 :root {
   /*** Text */
@@ -23,31 +23,18 @@
   --xl: 9.6rem;
 
   /*** Column */
-  --col-12: 100vw;
-  --col-11: 91.66vw;
-  --col-10: 83.33vw;
-  --col-09: 75vw;
-  --col-08: 66.66vw;
-  --col-07: 58.33vw;
-  --col-06: 50vw;
-  --col-05: 41.66vw;
-  --col-04: 33.33vw;
-  --col-03: 25vw;
-  --col-02: 16.66vw;
-  --col-01: 8.33vw;
-
-  --negative-col-12: -100vw;
-  --negative-col-11: -91.66vw;
-  --negative-col-10: -83.33vw;
-  --negative-col-09: -75vw;
-  --negative-col-08: -66.66vw;
-  --negative-col-07: -58.33vw;
-  --negative-col-06: -50vw;
-  --negative-col-05: -41.66vw;
-  --negative-col-04: -33.33vw;
-  --negative-col-03: -25vw;
-  --negative-col-02: -16.66vw;
-  --negative-col-01: -8.33vw;
+  --col-12: 100%;
+  --col-11: 91.66%;
+  --col-10: 83.33%;
+  --col-09: 75%;
+  --col-08: 66.66%;
+  --col-07: 58.33%;
+  --col-06: 50%;
+  --col-05: 41.66%;
+  --col-04: 33.33%;
+  --col-03: 25%;
+  --col-02: 16.66%;
+  --col-01: 8.33%;
 }
 
 html {
@@ -57,14 +44,14 @@ html {
 body {
   height: 100%;
 
-  font-family: 'Sarala', sans-serif;
+  font-family: "Sarala", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--darkGray);
 
   /********************* wip */
   font-size: 1.8rem;
-  line-height: 2.4rem;
+  line-height: 135%;
   font-weight: 400;
 
   font-variant: tabular-nums;
@@ -108,7 +95,7 @@ body {
 
   display: inline-block;
   font-size: 1.8rem;
-  line-height: 2.4rem;
+  line-height: 135%;
   padding: var(--xs) var(--sm);
   border: 2px solid var(--bg--darkGray);
   text-transform: capitalize;
@@ -120,6 +107,17 @@ body {
 .btn:hover {
   background-color: var(--bg--darkGray);
   color: var(--bg--gray);
+}
+
+.url {
+  text-decoration: none !important;
+  text-decoration-color: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--darkGray);
+  cursor: pointer;
+  color: var(--darkGray);
 }
 
 /****************** NAV */
@@ -240,7 +238,7 @@ body {
   z-index: 2100;
   height: 100vh;
   right: 0;
-  width: var(--col-09);
+  width: var(--col-04);
   display: flex;
   justify-content: center;
   transform: translateY(-100%);
@@ -273,8 +271,7 @@ body {
 /****************** LAYOUT */
 
 section {
-  padding-top: var(--lg);
-  padding-bottom: var(--xl);
+  padding: var(--lg) var(--col-01) var(--xl) var(--col-01);
 }
 
 .flex--container {
@@ -311,20 +308,9 @@ section {
 .copy__title {
   /********************* wip */
   font-size: 2.8rem;
-  line-height: 3rem;
   font-weight: 700;
 
   margin: var(--md) 0;
-}
-
-.url {
-  text-decoration: none !important;
-  text-decoration-color: none !important;
-  text-decoration-line: none !important;
-  text-decoration-style: none !important;
-  border-bottom: 1px solid var(--darkGray);
-  cursor: pointer;
-  color: var(--darkGray);
 }
 
 .copy__paragraph {
@@ -419,6 +405,14 @@ section {
 }
 
 /***************** PLACEHOLDER */
+/* SECTION LANDING */
+.landing {
+   width: var(--col-12);
+   min-height: 30rem;
+   background-color: var(--bg--red);
+}
+
+
 /* backgrounds */
 .background--yoga-meditation {
   background-color: var(--bg--gray);
@@ -435,8 +429,12 @@ footer {
 }
 
 /****************** RESPONSIVE */
-/* for-phone-only  600px */
-@media (max-width: 37.5em) {
+
+/* for-tablet-landscape-up 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
 }
 
 /* for-tablet-portrait-up 900px */
@@ -448,12 +446,20 @@ footer {
   .flex--container {
     flex-direction: column;
   }
+
+  #nav {
+    width: var(--col-06);
+  }
 }
 
-/* for-tablet-landscape-up 1200px */
-@media (max-width: 75em) {
-  html {
-    font-size: 56.25%; /* 9px */
+/* for-phone-only  600px */
+@media (max-width: 37.5em) {
+  section {
+    padding: var(--lg) 0 var(--xl) 0;
+  }
+
+  #nav {
+    width: var(--col-09);
   }
 }
 
