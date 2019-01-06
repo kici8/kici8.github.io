@@ -1,6 +1,5 @@
 :root {
   /*** Text */
-  font-size: 62.5%;
   --darkGray: rgba(0, 0, 0, 0.82);
   --gray: rgba(0, 0, 0, 0.64);
   --lightGray: rgba(0, 0, 0, 0.42);
@@ -10,6 +9,7 @@
 
   /*** Palette **/
   --bg--brown: rgb(188, 170, 164);
+  --bg--darkGray: rgb(43, 43, 43);
   --bg--gray: rgb(238, 238, 238);
   --bg--red: rgb(230, 115, 115);
 
@@ -46,6 +46,10 @@
   --negative-col-03: -25vw;
   --negative-col-02: -16.66vw;
   --negative-col-01: -8.33vw;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -104,7 +108,7 @@ body {
   font-size: 1.8rem;
   line-height: 2.4rem;
   padding: var(--xs) var(--sm);
-  border: 2px solid var(--darkGray);
+  border: 2px solid var(--bg--darkGray);
   text-transform: capitalize;
   cursor: pointer;
 
@@ -112,7 +116,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--darkGray);
+  background-color: var(--bg--darkGray);
   color: var(--bg--gray);
 }
 
@@ -134,7 +138,7 @@ body {
 }
 
 .header__logo {
-  background-color: black;
+  background-color: var(--darkGray);
   width: 77px;
   height: 50px;
   margin: 0 auto;
@@ -159,9 +163,13 @@ body {
   height: auto;
 }
 
+/* Nav */
+
 #nav--trigger {
-  width: 32px;
-  height: 32px;
+  width: calc(32px); /* Opera mini support */
+  height: calc(32px); /* Opera mini support */
+  width: calc(2.8rem + 4px);
+  height: calc(2.8rem + 4px);
 
   position: fixed;
   cursor: pointer;
@@ -197,15 +205,16 @@ body {
 }
 
 .burger--top {
-  top: 10px;
+  top: 1rem;
 }
 
 .burger--bottom {
-  bottom: 10px;
+  bottom: 1rem;
 }
 
 #nav--trigger.active .burger--top {
-  top: 15px;
+  top: 15px; /* Opera mini support */
+  top: calc(1.4rem + 1px);
   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
   -moz-transform: translate3d(0, 0, 0) rotate(45deg);
   -ms-transform: translate3d(0, 0, 0) rotate(45deg);
@@ -214,7 +223,8 @@ body {
 }
 
 #nav--trigger.active .burger--bottom {
-  bottom: 15px;
+  bottom: 15px; /* Opera mini support */
+  bottom: calc(1.4rem + 1px);
   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
   -moz-transform: translate3d(0, 0, 0) rotate(-45deg);
   -ms-transform: translate3d(0, 0, 0) rotate(-45deg);
@@ -267,8 +277,6 @@ section {
 
 .flex--container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .flex--content {
@@ -419,97 +427,33 @@ section {
   background-image: url("../img/yogaPlaceholder.jpg");
 }
 
-/* Section study Holiday */
-
-.section--study--holiday {
-  display: flex;
-  padding: 0;
-}
-
-/* Japan */
-.japan--container {
-  width: var(--col-12);
-  background-image: url("../img/giappone/01.png");
-  display: flex;
-  padding-top: var(--lg);
-  padding-bottom: var(--xl);
-}
-
-.india--container {
-  width: var(--col-12);
-  background-image: url("../img/india/02.png");
-  display: flex;
-  padding-top: var(--lg);
-  padding-bottom: var(--xl);
-}
-
 /* Footer */
 footer {
   background-color: var(--bg--brown);
 }
 
 /****************** RESPONSIVE */
-/* for-phone-only  */
-@media (max-width: 540px) {
+/* for-phone-only  600px */
+@media (max-width: 37.5em) {
 }
 
-/* for-tablet-portrait-up */
-@media (min-width: 768px) {
-  #nav {
-    width: var(--col-06);
-  }
-
-  .flex--content {
-    width: var(--col-10);
+/* for-tablet-portrait-up 900px */
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%; /* 8px */
   }
 }
 
-/*  for-tablet-landscape-up */
-@media (min-width: 992px) {
-}
-
-/*  for-desktop-up */
-@media (min-width: 1140px) {
-  #nav {
-    width: var(--col-04);
-  }
-
-  .flex--container {
-    flex-direction: row;
-  }
-
-  .flex--content {
-    width: var(--col-05);
-  }
-
-  /* Section Yoga */
-  .section--yoga .flex--container {
-    flex-direction: row-reverse;
-  }
-
-  /* Section study Holiday */
-  /* Japan */
-  .japan--container {
-    width: var(--col-06);
-  }
-
-  .india--container {
-    width: var(--col-06);
+/* for-tablet-landscape-up 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; /* 9px */
   }
 }
 
-/*  for-big-desktop-up */
-@media (min-width: 1800px) {
-  #nav {
-    width: var(--col-03);
-  }
-
-  .flex--content--divider {
-    display: flex;
-    width: var(--col-02);
-  }
-
-  .flex--content {
-    width: var(--col-03);
+/*  for-big-desktop-up 1800px */
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%; /* 12px */
   }
 }
