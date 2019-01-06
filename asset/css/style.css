@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sarala:400,700');
+
 :root {
   /*** Text */
   --darkGray: rgba(0, 0, 0, 0.82);
@@ -55,7 +57,7 @@ html {
 body {
   height: 100%;
 
-  font-family: sans-serif; /****************** Add a font */
+  font-family: 'Sarala', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--darkGray);
