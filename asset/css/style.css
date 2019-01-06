@@ -442,6 +442,10 @@ footer {
   html {
     font-size: 50%; /* 8px */
   }
+
+  .flex--container {
+    flex-direction: column;
+  }
 }
 
 /* for-tablet-landscape-up 1200px */
