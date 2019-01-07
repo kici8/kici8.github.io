@@ -19,6 +19,7 @@
 
   <body>
     <header>
+      <!-- 
       <div class="header">
         <div class="header__logo-container">
           <div id="header__logo" class="header__logo show"></div>
@@ -27,6 +28,7 @@
           </div>
         </div>
       </div>
+      -->
       <nav id="nav">
         <div class="nav--content">
           <ul>
@@ -43,18 +45,24 @@
     </header>
 
     <section class="landing">
-
+      <div class="copy--container">
+        <h3 class="landing__title">Associazione di ayurveda e massaggi</h3>
+        <h1 class="landing__title">Veda Mekong</h1>
+        <p class="landing__title">
+          La nostra filosofia si basa sui principi della tradizionale medicina
+          orientale, conoscendo i quali si sviluppa un sano rapporto
+          uomo-natura-spiritualit&agrave;, indispensabile per vivere in maniera
+          semplice e serena.
+        </p>
+      </div>
     </section>
 
     <div class="background--yoga-meditation">
       <section class="section--yoga">
         <div class="flex--container">
-          <div class="flex--content align--center justify--center">
-            <div class="media--container sub--container">
-              <div class="media--img aspect-ratio--16x9" id="yoga--img"></div>
+            <div class="media--container--yoga--image">
+              <img src="./asset/img/yoga-placholder-8-5.png" alt="Fotografia di una lezione di yoga." class="image">
             </div>
-          </div>
-          <div class="flex--content align--center justify--center">
             <div class="copy--container sub--container">
               <h2 class="copy__title">Yoga</h2>
               <p class="copy__paragraph">
@@ -93,19 +101,15 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       <section class="section--meditation">
-        <div class="flex--container">
-          <div class="flex--content align--center justify--center">
-            <div class="media--container sub--container">
-              <div class="media--img aspect-ratio--16x9" id="yoga--img"></div>
-            </div>
-          </div>
+        <div class="flex--container section--meditation__flex--container">
+            <div class="media--container--meditation--image">
+                <img src="./asset/img/maditation-placholder-4-3.png" alt="Fotografia di una lezione di yoga." class="image">
+              </div>
 
-          <div class="flex--content  align--center justify--center">
             <div class="copy--container sub--container">
               <h2 class="copy__title">Meditazione del cuore</h2>
               <p class="copy__paragraph">
@@ -139,14 +143,12 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
     </div>
 
     <section class="section--study--holiday">
       <div class="flex--container">
-        <div class="flex--content align--top justify--center">
           <div class="copy--container sub--container">
             <h2 class="copy__title">Viaggio studio in Jappone</h2>
             <p class="copy__paragraph">
@@ -171,9 +173,7 @@
 
             <a class="btn"> Scopri di più </a>
           </div>
-        </div>
 
-        <div class=" flex--content align--top justify--center">
           <div class="copy--container sub--container">
             <h2 class="copy__title">Viaggio studio in India</h2>
             <p class="copy__paragraph">
@@ -196,14 +196,12 @@
 
             <a class="btn"> Scopri di più </a>
           </div>
-        </div>
       </div>
     </section>
 
     <footer>
       <section class="section--contact">
         <div class="flex--container">
-          <div class="flex--content align--center justify--center">
             <div class="copy--container sub--container text--centered">
               <h2 class="copy__title">Sede</h2>
               <p class="copy__paragraph">
@@ -217,8 +215,6 @@
                 >
               </p>
             </div>
-          </div>
-          <div class="flex--content  align--center justify--center">
             <div class="copy--container sub--container text--centered ">
               <h2 class="copy__title">Contatti</h2>
               <p class="copy__paragraph">
@@ -230,7 +226,6 @@
                 >
               </p>
             </div>
-          </div>
         </div>
       </section>
     </footer>
